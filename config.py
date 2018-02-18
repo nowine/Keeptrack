@@ -9,7 +9,7 @@ class Config(object):
     SECRET_KEY = 'Yy12345^'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
 
-    @staticmethiOd
+    @staticmethod
     def init_app(app):
         pass
 
