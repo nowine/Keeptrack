@@ -9,6 +9,10 @@ db = SQLAlchemy()
 def create_app(config_name='default'):
     app = Flask(__name__)
     app.config.from_object(configs[config_name])
+    #app.debug = configs[config_name].DEBUG
+
+    app.jinja_env.variable_start_string = "{|"
+    app.jinja_env.variable_end_string = "|}"
 
     #components initiation
     db.init_app(app)
